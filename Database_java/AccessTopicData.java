@@ -9,10 +9,10 @@ public class AccessTopicData {
 
         connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         System.out.println("Connection established successfully...");
-
         System.out.println();
         System.out.println();
         System.out.println();
+        //
         Statement smt = connection.createStatement();
         ResultSet rs = smt.executeQuery("select * from topics");
 

@@ -1,12 +1,13 @@
 package com.tap.nirjala.demo;
-
 public class MultithreadBank {
     static void serveCustomer(String name)
     {
         System.out.println(name+" service provided by..."+Thread.currentThread().getName());
-        try {
+        try 
+        {
             Thread.sleep(2000);
-        } catch ( InterruptedException e) {
+        } catch ( InterruptedException e)
+        {
             e.printStackTrace();
         }
         System.out.println(name+" service finished by..."+Thread.currentThread().getName());

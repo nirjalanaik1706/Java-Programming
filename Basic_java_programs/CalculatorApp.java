@@ -9,12 +9,10 @@ public class CalculatorApp extends JFrame {
     public CalculatorApp() {
         super("Calculator");
 
-        // Create the display field
         display = new JTextField(15);
-        display.setEditable(false); // make it non-editable
+        display.setEditable(false); 
         display.setHorizontalAlignment(JTextField.RIGHT);
 
-        // Create buttons
         String[] buttonLabels = {
             "7", "8", "9", "/",
             "4", "5", "6", "*",
@@ -29,12 +27,10 @@ public class CalculatorApp extends JFrame {
             buttonPanel.add(button);
         }
 
-        // Set layout
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(display, BorderLayout.NORTH);
         getContentPane().add(buttonPanel, BorderLayout.CENTER);
 
-        // Set frame properties
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
         setLocationRelativeTo(null);
