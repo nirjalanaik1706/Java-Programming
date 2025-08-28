@@ -6,13 +6,15 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class Calculator extends Application {
+public class Calculator extends Application 
+{
 
     private StringBuilder inputBuffer = new StringBuilder();
     private Label displayLabel;
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) 
+    {
         GridPane gridPane = new GridPane();
         gridPane.setPadding(new Insets(10));
         gridPane.setHgap(5);
@@ -24,15 +26,18 @@ public class Calculator extends Application {
         GridPane.setColumnSpan(displayLabel, 4);
         gridPane.add(displayLabel, 0, 0);
 
-        String[][] buttonLabels = {
+        String[][] buttonLabels = 
+        {
                 {"7", "8", "9", "/"},
                 {"4", "5", "6", "*"},
                 {"1", "2", "3", "-"},
                 {"0", ".", "=", "+"}
         };
 
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
+        for (int i = 0; i < 4; i++) 
+        {
+            for (int j = 0; j < 4; j++) 
+            {
                 Button button = new Button(buttonLabels[i][j]);
                 button.setMinWidth(50);
                 button.setOnAction(e -> handleButtonClick(button.getText()));
@@ -46,7 +51,8 @@ public class Calculator extends Application {
         primaryStage.show();
     }
 
-    private void handleButtonClick(String buttonText) {
+    private void handleButtonClick(String buttonText) 
+    {
         switch (buttonText) {
             case "=":
                 evaluateExpression();
@@ -57,7 +63,8 @@ public class Calculator extends Application {
         }
     }
 
-    private void evaluateExpression() {
+    private void evaluateExpression() 
+    {
         try {
             String expression = inputBuffer.toString();
             double result = evaluate(expression);

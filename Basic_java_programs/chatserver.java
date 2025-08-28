@@ -5,7 +5,8 @@ import java.util.*;
 public class chatserver {
     private static Set<PrintWriter> clientWriters = new HashSet<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException 
+    {
         System.out.println("Chat server started...");
         ServerSocket serverSocket = new ServerSocket(12345);
 
