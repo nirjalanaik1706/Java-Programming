@@ -8,7 +8,8 @@ public class AsyncCoffeeShop {
         
         CompletableFuture<Void> coffeeready = CompletableFuture.runAsync(()->
         {
-            try {
+            try 
+                {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
             }
