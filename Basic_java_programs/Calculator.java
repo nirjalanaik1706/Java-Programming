@@ -100,7 +100,8 @@ public class Calculator extends Application
                 return false;
             }
 
-            double parse() {
+            double parse()
+            {
                 nextChar();
                 double x = parseExpression();
                 if (pos < expression.length()) throw new RuntimeException("Unexpected: " + (char) ch);
