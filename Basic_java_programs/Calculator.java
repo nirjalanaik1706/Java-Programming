@@ -81,7 +81,8 @@ public class Calculator extends Application
 
     private double evaluate(String expression)
     {
-        return new Object() {
+        return new Object() 
+        {
             int pos = -1, ch;
 
             void nextChar() {
