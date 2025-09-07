@@ -88,9 +88,11 @@ public class Calculator extends Application
                 ch = (++pos < expression.length()) ? expression.charAt(pos) : -1;
             }
 
-            boolean eat(int charToEat) {
+            boolean eat(int charToEat)
+            {
                 while (ch == ' ') nextChar();
-                if (ch == charToEat) {
+                if (ch == charToEat)
+                {
                     nextChar();
                     return true;
                 }
