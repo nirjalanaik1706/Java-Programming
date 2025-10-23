@@ -11,7 +11,8 @@ public class AsyncCoffeeShop {
             try 
                 {
                 Thread.sleep(2000);
-            } catch (InterruptedException e) {
+            } catch (InterruptedException e) 
+            {
             }
         });
         System.out.println("You keep chatting with your friend...");
