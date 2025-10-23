@@ -2,7 +2,8 @@ package com.tap.nirjala.demo;
 
 import java.util.concurrent.CompletableFuture;
 
-public class AsyncCoffeeShop {
+public class AsyncCoffeeShop 
+{
     public static void main(String[] args) {
         System.out.println("Order placed for coffee ");
         
