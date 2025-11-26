@@ -1,5 +1,6 @@
 package com.tap.nirjala1.demo;
-public class ElectricScooter implements Vehicle{
+public class ElectricScooter implements Vehicle
+{
     public void start()
     {
         System.out.println("the Scotter will be started");

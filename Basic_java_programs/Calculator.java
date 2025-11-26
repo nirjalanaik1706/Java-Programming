@@ -53,7 +53,8 @@ public class Calculator extends Application
 
     private void handleButtonClick(String buttonText) 
     {
-        switch (buttonText) {
+        switch (buttonText) 
+        {
             case "=":
                 evaluateExpression();
                 break;
@@ -69,31 +70,38 @@ public class Calculator extends Application
             String expression = inputBuffer.toString();
             double result = evaluate(expression);
             displayLabel.setText(String.valueOf(result));
-        } catch (Exception e) {
+        } catch (Exception e) 
+            {
             displayLabel.setText("Error");
-        } finally {
+        } finally 
+            {
             inputBuffer.setLength(0);
         }
     }
 
-    private double evaluate(String expression) {
-        return new Object() {
+    private double evaluate(String expression)
+    {
+        return new Object() 
+        {
             int pos = -1, ch;
 
             void nextChar() {
                 ch = (++pos < expression.length()) ? expression.charAt(pos) : -1;
             }
 
-            boolean eat(int charToEat) {
+            boolean eat(int charToEat)
+            {
                 while (ch == ' ') nextChar();
-                if (ch == charToEat) {
+                if (ch == charToEat)
+                {
                     nextChar();
                     return true;
                 }
                 return false;
             }
 
-            double parse() {
+            double parse()
+            {
                 nextChar();
                 double x = parseExpression();
                 if (pos < expression.length()) throw new RuntimeException("Unexpected: " + (char) ch);

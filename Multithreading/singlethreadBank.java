@@ -1,7 +1,8 @@
 package com.tap.nirjala.demo;
 
-
-public class singlethreadBank{
+//single thread program 
+public class singlethreadBank
+{
     public static void main(String[] args)
     {
         serveCustomer("Customer 1");
