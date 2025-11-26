@@ -307,8 +307,16 @@ public class AssessmentAPITest {
             .body("[0].role", nullValue());
     }
 
-    //@Test
-    // public void GetAllTests() {
-    //     // test disabled
+    // @Test
+    // public void GetAllTests(){
+    //     given()
+    //     .headers("Content-Type", "application/json")
+    //     .when()
+    //     .get("/api/Assessment/getalltest/from/2025-11-24/to/2025-11-26")
+    //     .then()
+    //     .body("[0].id",equalTo(9))
+    //     .body("[0].name",equalTo("Advance java"))
+    //     .body("[0].scheduledDate",equalTo("2025-11-25T11:26:00"))
+    //     .body("[0].status",equalTo("created"));
     // }
 }
