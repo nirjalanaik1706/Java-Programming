@@ -1,183 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="19" failed="1" skipped="0">
+<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-26T16:31:35 IST" name="ProductCatalogSuite" finished-at="2025-11-26T16:31:42 IST" duration-ms="6517">
+  <suite started-at="2025-11-26T17:15:10 IST" name="ProductCatalogSuite" finished-at="2025-11-26T17:15:20 IST" duration-ms="10267">
     <groups>
     </groups>
-    <test started-at="2025-11-26T16:31:35 IST" name="AssessmentIntelligenceAPI Tests" finished-at="2025-11-26T16:31:38 IST" duration-ms="3029">
+    <test started-at="2025-11-26T17:15:10 IST" name="AssessmentIntelligenceAPI Tests" finished-at="2025-11-26T17:15:15 IST" duration-ms="4902">
       <class name="com.transflower.tflassessment.AssessmentIntelligenceAPITest">
-        <test-method signature="testGetCandidateResults_shouldReturn200()[pri:0, instance:com.transflower.tflassessment.AssessmentIntelligenceAPITest@5b367418]" started-at="2025-11-26T16:31:35 IST" name="testGetCandidateResults_shouldReturn200" finished-at="2025-11-26T16:31:38 IST" duration-ms="2940" status="PASS">
+        <test-method signature="testGetCandidateResults_shouldReturn200()[pri:0, instance:com.transflower.tflassessment.AssessmentIntelligenceAPITest@5b367418]" started-at="2025-11-26T17:15:10 IST" name="testGetCandidateResults_shouldReturn200" finished-at="2025-11-26T17:15:15 IST" duration-ms="4820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetCandidateResults_shouldReturn200 -->
       </class> <!-- com.transflower.tflassessment.AssessmentIntelligenceAPITest -->
     </test> <!-- AssessmentIntelligenceAPI Tests -->
-    <test started-at="2025-11-26T16:31:38 IST" name="AssessmentAPI" finished-at="2025-11-26T16:31:42 IST" duration-ms="3439">
+    <test started-at="2025-11-26T17:15:15 IST" name="AssessmentAPI" finished-at="2025-11-26T17:15:20 IST" duration-ms="5301">
       <class name="com.transflower.tflassessment.AssessmentAPITest">
-        <test-method signature="AddQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:38 IST" name="AddQuestion" finished-at="2025-11-26T16:31:38 IST" duration-ms="169" status="PASS">
+        <test-method signature="AddQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:15 IST" name="AddQuestion" finished-at="2025-11-26T17:15:16 IST" duration-ms="1130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddQuestion -->
-        <test-method signature="AddTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:38 IST" name="AddTest" finished-at="2025-11-26T16:31:39 IST" duration-ms="629" status="PASS">
+        <test-method signature="AddTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:16 IST" name="AddTest" finished-at="2025-11-26T17:15:17 IST" duration-ms="881" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddTest -->
-        <test-method signature="ChangeDuration()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:39 IST" name="ChangeDuration" finished-at="2025-11-26T16:31:39 IST" duration-ms="26" status="PASS">
+        <test-method signature="ChangeDuration()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="ChangeDuration" finished-at="2025-11-26T17:15:17 IST" duration-ms="50" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ChangeDuration -->
-        <test-method signature="CreateTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:39 IST" name="CreateTest" finished-at="2025-11-26T16:31:39 IST" duration-ms="149" status="PASS">
+        <test-method signature="CreateTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="CreateTest" finished-at="2025-11-26T17:15:17 IST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateTest -->
-        <test-method signature="GetAll()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:39 IST" name="GetAll" finished-at="2025-11-26T16:31:40 IST" duration-ms="335" status="PASS">
+        <test-method signature="GetAll()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="GetAll" finished-at="2025-11-26T17:15:18 IST" duration-ms="439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAll -->
-        <test-method signature="GetAllAssesment()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:40 IST" name="GetAllAssesment" finished-at="2025-11-26T16:31:40 IST" duration-ms="241" status="PASS">
+        <test-method signature="GetAllAssesment()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:18 IST" name="GetAllAssesment" finished-at="2025-11-26T17:15:18 IST" duration-ms="331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAllAssesment -->
-        <test-method signature="GetAllBySubjectMatterExpert()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:40 IST" name="GetAllBySubjectMatterExpert" finished-at="2025-11-26T16:31:40 IST" duration-ms="304" status="PASS">
+        <test-method signature="GetAllBySubjectMatterExpert()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:18 IST" name="GetAllBySubjectMatterExpert" finished-at="2025-11-26T17:15:19 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAllBySubjectMatterExpert -->
-        <test-method signature="GetAllEmployees()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:40 IST" name="GetAllEmployees" finished-at="2025-11-26T16:31:40 IST" duration-ms="188" status="PASS">
+        <test-method signature="GetAllEmployees()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllEmployees" finished-at="2025-11-26T17:15:19 IST" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAllEmployees -->
-        <test-method signature="GetAllQuestionsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:40 IST" name="GetAllQuestionsBySubject" finished-at="2025-11-26T16:31:40 IST" duration-ms="213" status="PASS">
+        <test-method signature="GetAllQuestionsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllQuestionsBySubject" finished-at="2025-11-26T17:15:19 IST" duration-ms="254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAllQuestionsBySubject -->
-        <test-method signature="GetAllSubjects()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:40 IST" name="GetAllSubjects" finished-at="2025-11-26T16:31:41 IST" duration-ms="138" status="PASS">
+        <test-method signature="GetAllSubjects()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllSubjects" finished-at="2025-11-26T17:15:19 IST" duration-ms="164" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetAllSubjects -->
-        <test-method signature="GetAllTests()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="GetAllTests" finished-at="2025-11-26T16:31:41 IST" duration-ms="45" status="FAIL">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Expected response body to be verified as JSON, HTML or XML but no content-type was defined in the response.
-Try registering a default parser using:
-   RestAssured.defaultParser(<parser type>);
-Content was:
-
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Expected response body to be verified as JSON, HTML or XML but no content-type was defined in the response.
-Try registering a default parser using:
-   RestAssured.defaultParser(<parser type>);
-Content was:
-
-
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
-at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
-at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-at io.restassured.assertion.StreamVerifier.newAssertion(StreamVerifier.groovy:43)
-at io.restassured.internal.assertion.BodyMatcher.validate(BodyMatcher.java:93)
-at io.restassured.internal.assertion.BodyMatcherGroup.lambda$validate$0(BodyMatcherGroup.java:30)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:215)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1716)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:727)
-at io.restassured.internal.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.java:30)
-at io.restassured.internal.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
-at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
-at io.restassured.internal.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:499)
-at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
-at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
-at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)
-at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)
-at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)
-at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
-at com.transflower.tflassessment.AssessmentAPITest.GetAllTests(AssessmentAPITest.java:317)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllTests -->
-        <test-method signature="GetConceptsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="GetConceptsBySubject" finished-at="2025-11-26T16:31:41 IST" duration-ms="173" status="PASS">
+        <test-method signature="GetConceptsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetConceptsBySubject" finished-at="2025-11-26T17:15:19 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetConceptsBySubject -->
-        <test-method signature="GetDetails()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="GetDetails" finished-at="2025-11-26T16:31:41 IST" duration-ms="197" status="PASS">
+        <test-method signature="GetDetails()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetDetails" finished-at="2025-11-26T17:15:20 IST" duration-ms="217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetDetails -->
-        <test-method signature="GetEmployeeById()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="GetEmployeeById" finished-at="2025-11-26T16:31:41 IST" duration-ms="199" status="PASS">
+        <test-method signature="GetEmployeeById()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="GetEmployeeById" finished-at="2025-11-26T17:15:20 IST" duration-ms="226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetEmployeeById -->
-        <test-method signature="GetSmeBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="GetSmeBySubject" finished-at="2025-11-26T16:31:41 IST" duration-ms="195" status="PASS">
+        <test-method signature="GetSmeBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="GetSmeBySubject" finished-at="2025-11-26T17:15:20 IST" duration-ms="273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetSmeBySubject -->
-        <test-method signature="RemoveQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="RemoveQuestion" finished-at="2025-11-26T16:31:41 IST" duration-ms="16" status="PASS">
+        <test-method signature="RemoveQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="RemoveQuestion" finished-at="2025-11-26T17:15:20 IST" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RemoveQuestion -->
-        <test-method signature="RemoveQuestions()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="RemoveQuestions" finished-at="2025-11-26T16:31:41 IST" duration-ms="16" status="PASS">
+        <test-method signature="RemoveQuestions()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="RemoveQuestions" finished-at="2025-11-26T17:15:20 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RemoveQuestions -->
-        <test-method signature="Reschedule()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:41 IST" name="Reschedule" finished-at="2025-11-26T16:31:42 IST" duration-ms="19" status="PASS">
+        <test-method signature="Reschedule()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="Reschedule" finished-at="2025-11-26T17:15:20 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Reschedule -->
-        <test-method signature="getConcept()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T16:31:42 IST" name="getConcept" finished-at="2025-11-26T16:31:42 IST" duration-ms="160" status="PASS">
+        <test-method signature="getConcept()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="getConcept" finished-at="2025-11-26T17:15:20 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getConcept -->
+        <test-method signature="testGetAllSubjects()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="testGetAllSubjects" finished-at="2025-11-26T17:15:20 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllSubjects -->
       </class> <!-- com.transflower.tflassessment.AssessmentAPITest -->
     </test> <!-- AssessmentAPI -->
   </suite> <!-- ProductCatalogSuite -->
