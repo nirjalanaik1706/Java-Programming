@@ -1,28 +1,38 @@
-package com.transflower.tflassessment.demo.services;
+// package com.transflower.tflassessment.demo.services;
+//  import com.transflower.tflassessment.demo.entities.*;
+// import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaRepositoryImpl;
+//  public class EvaluationCriteriaserviceImpl implements EvaluationCriteriaService {
 
-import com.transflower.tflassessment.demo.entities.*;
-import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaRepositoryImpl;
+//     private EvaluationCriteriaRepositoryImpl repo = new EvaluationCriteriaRepositoryImpl();
 
-public class EvaluationCriteriaserviceImpl implements EvaluationCriteriaService {
+//     @Override
+//     public boolean updateSubject(int id, int subjectId) {
+//         repo.updateSubject(id, subjectId);
+//         return true;
+//     }
 
-    private EvaluationCriteriaRepositoryImpl repo=new EvaluationCriteriaRepositoryImpl();
+//     private EvaluationCriteriaRepository repo = null;
 
-    @Override
-    public boolean updateSubject(int id, int subjectId) {
-        repo.updateSubject(id, subjectId);
-        return true;
-    }
+//     public EvaluationCriteriaserviceImpl(EvaluationCriteriaRepository _repo) {
+//         this.repo = _repo;
+//     }
 
-    @Override
-    public boolean insertCriteria(EvaluationCriteria ec) {
-        repo.insertCriteria(ec);
-        return true;
-    }
+// //     @Override
+// //     public boolean updateSubject(int id, int subjectId) {
+// //         repo.updateSubject(id, subjectId);
+// //         return true;
+// //     }
 
-    @Override
-    public boolean updateCriteria(int EvaluationCriteriaId, int subjectId) {
-        repo.updateCriteria(EvaluationCriteriaId, subjectId);
-        return true;
-    }
+// //     @Override
+// //     public boolean insertCriteria(EvaluationCriteria ec) {
+// //         repo.insertCriteria(ec);
+// //         return true;
+// //     }
 
-}
+// //     @Override
+// //     public boolean updateCriteria(int EvaluationCriteriaId, int subjectId) {
+// //         repo.updateCriteria(EvaluationCriteriaId, subjectId);
+// //         return true;
+// //     }
+
+// // }

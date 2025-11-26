@@ -1,8 +1,18 @@
 package com.transflower.tflassessment.demo.repositories;
-import com.transflower.tflassessment.demo.repositories.*;
-import com.transflower.tflassessment.demo.entities.*;
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.transflower.tflassessment.demo.entities.NewQuestion;
+import com.transflower.tflassessment.demo.entities.Question;
+import com.transflower.tflassessment.demo.entities.QuestionDetails;
+import com.transflower.tflassessment.demo.entities.QuestionTitle;
+import com.transflower.tflassessment.demo.entities.SubjectQuestion;
 
 public class QuestionBankRepositoryImpl implements QuestionBankRepository {
 
@@ -27,7 +37,6 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return questions;
     }
 
@@ -98,9 +107,11 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
 
         try (Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
              Statement statement = connection.createStatement();
-             ResultSet resultSet = statement.executeQuery(query)) {
+             ResultSet resultSet = statement.executeQuery(query)) 
+        {
 
-            while (resultSet.next()) {
+            while (resultSet.next()) 
+            {
                 int id = resultSet.getInt("id");
                 String title = resultSet.getString("title");
                 String subject = resultSet.getString("subject");
@@ -179,6 +190,7 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
 
         return false;
     }
+    
 
     @Override
     public Question getQuestion(int questionId) {
@@ -200,7 +212,7 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
                 question.setB(result.getString("b"));
                 question.setC(result.getString("c"));
                 question.setD(result.getString("d"));
-                question.setAnswerKey(result.getString("answerkey").charAt(0));
+                question.setAnswerKey(result.getString("answerkey"));
                 question.setEvaluationCriteriaId(result.getInt("evaluationcriteriaid"));
             }
 
@@ -303,35 +315,22 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
             e.printStackTrace();
         }
 
-        return "";
+        return null;
     }
+
+    
      public static void main(String[] args) {
-
-        // ================= AssessmentIntelligenceRepository =================
-        AssessmentIntelligenceRepositoryImpl intelligenceRepo = new AssessmentIntelligenceRepositoryImpl();
-        List<AnnualCandidateResult> results = intelligenceRepo.getCandidateResults(2, 2015);
-        for (AnnualCandidateResult result : results) {
-            System.out.println("Candidate ID: " + result.getCandidateId() + " Score: " + result.getScore());
-        }
-
-        // ================= AuthRepository =================
-        AuthRepositoryImpl authRepo = new AuthRepositoryImpl();
-        User user = authRepo.getUserWithRolesByEmail("kajal.ghule@example.com", "12345");
-        for (UserRole role : user.getUserRoles()) {
-            System.out.println("User Email: " + role.getEmail() + " User Password: " + role.getPassword());
-        }
-
-        // ================= QuestionBankRepository =================
+         // ================= QuestionBankRepository =================
         QuestionBankRepositoryImpl repo = new QuestionBankRepositoryImpl();
 
-        // -------- getAllQuestions --------
+//         // -------- getAllQuestions --------
         System.out.println("\nAll Questions:");
         List<QuestionTitle> allQuestions = repo.getAllQuestions();
         for (QuestionTitle q : allQuestions) {
             System.out.println(q.getId() + " - " + q.getTitle());
         }
 
-        // -------- getQuestionsBySubject --------
+//         // -------- getQuestionsBySubject --------
         int subjectId = 2;
         System.out.println("\nQuestions by Subject:");
         List<SubjectQuestion> subjectQuestions = repo.getQuestionsBySubject(subjectId);
@@ -339,48 +338,48 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
             System.out.println(q.getQuestionId() + " - " + q.getQuestion() + " - " + q.getSubject());
         }
 
-        // -------- getQuestionsBySubjectAndCriteria --------
+//         // -------- getQuestionsBySubjectAndCriteria --------
         System.out.println("\nQuestions by Subject and Criteria:");
         List<QuestionDetails> filteredQuestions = repo.getQuestionsBySubjectAndCriteria(1, 1);
         for (QuestionDetails q : filteredQuestions) {
             System.out.println(q.getId() + " - " + q.getQuestion() + " - " + q.getSubject() + " - " + q.getCriteria());
         }
 
-        // -------- getQuestionsWithSubjectAndCriteria --------
+//         // -------- getQuestionsWithSubjectAndCriteria --------
         System.out.println("\nAll Questions with Subject and Criteria:");
         List<QuestionDetails> fullQuestions = repo.getQuestionsWithSubjectAndCriteria();
         for (QuestionDetails q : fullQuestions) {
             System.out.println(q.getId() + " - " + q.getQuestion() + " - " + q.getSubject() + " - " + q.getCriteria());
         }
 
-        // -------- getQuestion --------
+//         // -------- getQuestion --------
         System.out.println("\nGet Question by ID:");
         Question existingQuestion = repo.getQuestion(1);
         System.out.println(existingQuestion.getId() + " - " + existingQuestion.getTitle());
 
-        // -------- updateAnswer --------
+//         // -------- updateAnswer --------
         boolean answerUpdated = repo.updateAnswer(1, 'b');
         System.out.println("\nAnswer Updated: " + answerUpdated);
 
-        // -------- updateQuestionOptions --------
+//         // -------- updateQuestionOptions --------
         Question question = new Question();
         question.setTitle("Updated Question?");
         question.setA("Option A");
         question.setB("Option B");
         question.setC("Option C");
         question.setD("Option D");
-        question.setAnswerKey('C');
+        question.setAnswerKey("C");
         boolean optionsUpdated = repo.updateQuestionOptions(1, question);
         System.out.println("\nOptions Updated: " + optionsUpdated);
 
-        // -------- updateSubjectCriteria --------
+//         // -------- updateSubjectCriteria --------
         Question updateSubjectCriteria = new Question();
         updateSubjectCriteria.setSubjectId(1);
         updateSubjectCriteria.setEvaluationCriteriaId(1);
         boolean subjectCriteriaUpdated = repo.updateSubjectCriteria(1, updateSubjectCriteria);
         System.out.println("\nSubject and Criteria Updated: " + subjectCriteriaUpdated);
 
-        // -------- insertQuestion --------
+//         // -------- insertQuestion --------
         NewQuestion newquestion = new NewQuestion();
         newquestion.setSubjectId(1);
         newquestion.setTitle("New Inserted Question?");
@@ -405,10 +404,5 @@ public class QuestionBankRepositoryImpl implements QuestionBankRepository {
         for (Question q : testQuestions) {
             System.out.println(q.getId() + " - " + q.getTitle());
         }
-    }
-
-    @Override
-    public boolean updateAnswer(int id, String answerKey) {
-        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ProductCatalogSuite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="AssessmentAPI(failed)" verbose="0">
+    <classes>
+      <class name="com.transflower.tflassessment.AssessmentAPITest">
+        <methods>
+          <include name="AddTest"/>
+        </methods>
+      </class> <!-- com.transflower.tflassessment.AssessmentAPITest -->
+    </classes>
+  </test> <!-- AssessmentAPI(failed) -->
+</suite> <!-- Failed suite [ProductCatalogSuite] -->

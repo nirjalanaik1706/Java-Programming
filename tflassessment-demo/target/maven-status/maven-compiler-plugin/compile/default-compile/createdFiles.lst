@@ -39,7 +39,6 @@ com\transflower\tflassessment\demo\entities\CandidateTestDetails.class
 com\transflower\tflassessment\demo\entities\CreateTestWithQuestions.class
 com\transflower\tflassessment\demo\entities\TestScoreDto.class
 com\transflower\tflassessment\demo\entities\TestAssignmentRequest.class
-com\transflower\tflassessment\demo\services\EvaluationCriteriaService.class
 com\transflower\tflassessment\demo\entities\TestList.class
 com\transflower\tflassessment\demo\entities\Question.class
 com\transflower\tflassessment\demo\repositories\InterviewRepositoryImpl.class
@@ -54,9 +53,7 @@ com\transflower\tflassessment\demo\entities\Test.class
 com\transflower\tflassessment\demo\repositories\CandidateAnswerRepositoryImpl.class
 com\transflower\tflassessment\demo\entities\CandidateSubjectResults.class
 com\transflower\tflassessment\demo\entities\StudentTestPerformanceDto.class
-com\transflower\tflassessment\demo\repositories\EvaluationCriteriaRepositoryImpl.class
 com\transflower\tflassessment\demo\entities\TestQuestion.class
-com\transflower\tflassessment\demo\services\EvaluationCriteriaserviceImpl.class
 com\transflower\tflassessment\demo\entities\SubjectModel.class
 com\transflower\tflassessment\demo\repositories\InterviewRepository.class
 com\transflower\tflassessment\demo\services\PersonServiceImpl.class
@@ -66,5 +63,4 @@ com\transflower\tflassessment\demo\entities\InterviewCandidateDetails.class
 com\transflower\tflassessment\demo\entities\LoginResponse.class
 com\transflower\tflassessment\demo\entities\Subject.class
 com\transflower\tflassessment\demo\repositories\AssessmentRepository.class
-com\transflower\tflassessment\demo\repositories\EvaluationCriteriaRepository.class
 com\transflower\tflassessment\demo\entities\EvaluationCriteria.class

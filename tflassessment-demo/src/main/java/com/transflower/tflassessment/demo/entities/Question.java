@@ -11,7 +11,7 @@ public class Question {
     private String B;
     private String C;
     private String D;
-    public char answerKey;
+    public String answerKey;
     private int evaluationCriteriaId;
 
     public Question() {
@@ -22,12 +22,12 @@ public class Question {
         this.B = null;
         this.C = null;
         this.D = null;
-        this.answerKey = ' ';
+        this.answerKey = null;
         this.evaluationCriteriaId = 0;
 
     }
 
-    public Question(int id, int subjectId, String title, String a, String b, String c, String d, char answerKey,
+    public Question(int id, int subjectId, String title, String a, String b, String c, String d, String answerKey,
             int evaluationCriteriaId) {
         this.id = id;
         this.subjectId = subjectId;
@@ -96,11 +96,11 @@ public class Question {
         this.D = D;
     }
 
-    public char getAnswerKey() {
+    public String getAnswerKey() {
         return answerKey;
     }
 
-    public void setAnswerKey(char answerKey) {
+    public void setAnswerKey(String answerKey) {
         this.answerKey = answerKey;
     }
 
@@ -146,5 +146,6 @@ public class Question {
     public String toString() {
         return "Question{id =" + id + " , subjectId = " + subjectId + " , title" + title + " , A" + A + "B" + B + " , C" + C + ", D" + D + " ,answerKey " + answerKey + " , evaluationCriteriaId" + evaluationCriteriaId + "}";
     }
+
 
 }

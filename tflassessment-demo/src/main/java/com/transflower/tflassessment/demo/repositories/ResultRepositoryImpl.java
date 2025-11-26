@@ -2,10 +2,22 @@ package com.transflower.tflassessment.demo.repositories;
 
 import java.sql.*;
 
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import com.transflower.tflassessment.demo.entities.*;
+
+
+import com.transflower.tflassessment.demo.entities.AppearedCandidate;
+import com.transflower.tflassessment.demo.entities.CandidateResultDetails;
+import com.transflower.tflassessment.demo.entities.CandidateSubjectResults;
+import com.transflower.tflassessment.demo.entities.FailedCandidateDetails;
+import com.transflower.tflassessment.demo.entities.PassedCandidateDetails;
+import com.transflower.tflassessment.demo.entities.Subject;
+import com.transflower.tflassessment.demo.entities.TestAverageReport;
+import com.transflower.tflassessment.demo.entities.TestList;
+import com.transflower.tflassessment.demo.entities.TestResultDetails;
+import com.transflower.tflassessment.demo.entities.TestScoreDto;
 
 public class ResultRepositoryImpl implements ResultRepository {
 
@@ -277,28 +289,137 @@ public class ResultRepositoryImpl implements ResultRepository {
         return failedCandidateDetails;
     }
 
-    @Override
-    public boolean setPassingLevel(int testId, int passingLevel) {
+@Override
+public boolean setPassingLevel(int testId, int passingLevel) {
+    String query = "update tests set passinglevel=? where id=?";
+    
+    try {
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, passingLevel);
+        preparedStatement.setInt(2, testId);
+        int rowsAffected = preparedStatement.executeUpdate();
+        return rowsAffected > 0;
+    } catch (Exception e) {
+        System.out.println(e);
         return false;
+    }
+}
+
+
+public List<CandidateSubjectResults> getCandidateSubjectResults(int candidateId) {
+    List<CandidateSubjectResults> candidateSubjectResults = new ArrayList<>();
+    String query = "SELECT Test.id, s.title AS subject, cs.score"
+                   + "FROM candidatesubjectresults cs "
+                   + "JOIN subjects s ON cs.subjectid = s.id "
+                   + "WHERE cs.candidateid = ?";
+    try {
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, candidateId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            CandidateSubjectResults result = new CandidateSubjectResults();
+            result.setCandidateId(resultSet.getInt("candidateid"));
+            result.setTestId( resultSet.getInt("id"));
+              result.setScore(resultSet.getInt("score"));
+            candidateSubjectResults.add(result);
+        }
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+    return candidateSubjectResults;
+}
+
+
+public List<Subject> getAllSubjects(int subjectId) {
+    List<Subject> subjects = new ArrayList<>();
+    String query = "SELECT id, title FROM subjects WHERE id = ?";
+    try {
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, subjectId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while (resultSet.next()) {
+            Subject subject = new Subject();
+            subject.setId(resultSet.getInt("id"));
+            subject.setTitle(resultSet.getString("title"));
+            subjects.add(subject);
+        }
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+    return subjects;
+}
+
+
+@Override
+public List<TestAverageReport> getTestAverageReport(int testId) {
+        List<TestAverageReport> averageReports = new ArrayList<>();
+        String query = "SELECT t.id AS testId, t.name AS testName, AVG(cr.score) AS averageScore "
+                           +"FROM tests t "
+                            + "JOIN candidatetestresults cr ON t.id = cr.testid "
+                            + "WHERE t.id = ? "
+                            + "GROUP BY t.id, t.name";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, testId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                TestAverageReport report = new TestAverageReport();
+                report.setSubjectName(resultSet.getString("testName"));
+                report.setCorrectAnswer(resultSet.getInt("correctAnswer"));
+
+                averageReports.add(report);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return averageReports;
+    }
+
+
+    @Override
+    public List<TestScoreDto> getCandidateAllScore(int candidateId) {
+        List<TestScoreDto> testScores = new ArrayList<>();
+        String query = "SELECT t.id AS testId, t.name AS testName, cr.score "
+                       + "FROM tests t "
+                       + "JOIN candidatetestresults cr ON t.id = cr.testid "
+                       + "WHERE cr.candidateid = ?";
+    
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, candidateId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                TestScoreDto scoreDto = new TestScoreDto();
+                scoreDto.setTestName(resultSet.getString("testName"));
+                scoreDto.setScore(resultSet.getInt("score"));
+                testScores.add(scoreDto);
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return testScores;
     }
 
     @Override
     public List<CandidateSubjectResults> getSubjectResultDetails(int subjectId) {
-       return null;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getSubjectResultDetails'");
     }
 
     @Override
     public List<Subject> getAllSubjects() {
-        return null;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllSubjects'");
     }
 
-    @Override
-    public List<TestAverageReport> getTestAverageReport(int testId) {
-        return null;
-    }
-
-    @Override
-    public List<TestScoreDto> getCandidateAllScore(int candidateId) {
-        return null;
-    }
+    
 }
+
+
+
+
+
+ 
+
