@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "candidateId": 17,
+    "testQuestionId": 16,
+    "answerKey": "B"
+  },
+  {
+    "id": 2,
+    "candidateId": 18,
+    "testQuestionId": 17,
+    "answerKey": "A"
+  }
+]

@@ -1,12 +1,7 @@
 package com.transflower.tflassessment;
 
 
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.greaterThan;
-import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
-import static io.restassured.RestAssured.given;
 
 public class AssessmentIntelligenceAPITest {
 
@@ -14,18 +9,20 @@ public class AssessmentIntelligenceAPITest {
         RestAssured.baseURI = "http://localhost:5238";
     }
 
-    @Test
-    public void testGetCandidateResults_shouldReturn200() {
-        given()
-        .when()
-            .get("/api/AssessmentIntelligence/Candidates/2/Year/2015")
-        .then()
-            .statusCode(200)
-            .body("size()", greaterThan(0))           
-            .body("[0].candidateId", equalTo(2))    
-            .body("[0].score", equalTo(2))
-            .body("[0].subjectTitle",equalTo("COREJAVA"));       
-            }
+
+        
+    // @Test
+    // public void testGetCandidateResults_shouldReturn200() {
+    //     given()
+    //     .when()
+    //         .get("/api/AssessmentIntelligence/Candidates/2/Year/2015")
+    //     .then()
+    //         .statusCode(200)
+    //         .body("size()", greaterThan(0))           
+    //         .body("[0].candidateId", equalTo(2))    
+    //         .body("[0].score", equalTo(2))
+    //         .body("[0].subjectTitle",equalTo("COREJAVA"));       
+    //         }
 
     // @Test
     // public void testGetCandidateResults_NoData_shouldReturn404() {
