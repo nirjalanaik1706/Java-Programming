@@ -18,7 +18,7 @@ public class ConceptAPITest {
         .put("/10/questions/64")
         .then()
         .statusCode(200)
-        .body(equalTo("true"));
+        .body(equalTo(true));
     }
     
 }
