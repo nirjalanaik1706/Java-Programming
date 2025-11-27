@@ -1,97 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="20" passed="20" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-26T17:15:10 IST" name="ProductCatalogSuite" finished-at="2025-11-26T17:15:20 IST" duration-ms="10267">
+  <suite started-at="2025-11-27T12:31:52 IST" name="ProductCatalogSuite" finished-at="2025-11-27T12:31:55 IST" duration-ms="3499">
     <groups>
     </groups>
-    <test started-at="2025-11-26T17:15:10 IST" name="AssessmentIntelligenceAPI Tests" finished-at="2025-11-26T17:15:15 IST" duration-ms="4902">
+    <test started-at="2025-11-27T12:31:52 IST" name="AssessmentIntelligenceAPI Tests" finished-at="2025-11-27T12:31:55 IST" duration-ms="3499">
       <class name="com.transflower.tflassessment.AssessmentIntelligenceAPITest">
-        <test-method signature="testGetCandidateResults_shouldReturn200()[pri:0, instance:com.transflower.tflassessment.AssessmentIntelligenceAPITest@5b367418]" started-at="2025-11-26T17:15:10 IST" name="testGetCandidateResults_shouldReturn200" finished-at="2025-11-26T17:15:15 IST" duration-ms="4820" status="PASS">
+        <test-method signature="testGetCandidateResults_shouldReturn200()[pri:0, instance:com.transflower.tflassessment.AssessmentIntelligenceAPITest@5b367418]" started-at="2025-11-27T12:31:52 IST" name="testGetCandidateResults_shouldReturn200" finished-at="2025-11-27T12:31:55 IST" duration-ms="3441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetCandidateResults_shouldReturn200 -->
       </class> <!-- com.transflower.tflassessment.AssessmentIntelligenceAPITest -->
     </test> <!-- AssessmentIntelligenceAPI Tests -->
-    <test started-at="2025-11-26T17:15:15 IST" name="AssessmentAPI" finished-at="2025-11-26T17:15:20 IST" duration-ms="5301">
-      <class name="com.transflower.tflassessment.AssessmentAPITest">
-        <test-method signature="AddQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:15 IST" name="AddQuestion" finished-at="2025-11-26T17:15:16 IST" duration-ms="1130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddQuestion -->
-        <test-method signature="AddTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:16 IST" name="AddTest" finished-at="2025-11-26T17:15:17 IST" duration-ms="881" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddTest -->
-        <test-method signature="ChangeDuration()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="ChangeDuration" finished-at="2025-11-26T17:15:17 IST" duration-ms="50" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeDuration -->
-        <test-method signature="CreateTest()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="CreateTest" finished-at="2025-11-26T17:15:17 IST" duration-ms="186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateTest -->
-        <test-method signature="GetAll()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:17 IST" name="GetAll" finished-at="2025-11-26T17:15:18 IST" duration-ms="439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAll -->
-        <test-method signature="GetAllAssesment()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:18 IST" name="GetAllAssesment" finished-at="2025-11-26T17:15:18 IST" duration-ms="331" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllAssesment -->
-        <test-method signature="GetAllBySubjectMatterExpert()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:18 IST" name="GetAllBySubjectMatterExpert" finished-at="2025-11-26T17:15:19 IST" duration-ms="372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllBySubjectMatterExpert -->
-        <test-method signature="GetAllEmployees()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllEmployees" finished-at="2025-11-26T17:15:19 IST" duration-ms="246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllEmployees -->
-        <test-method signature="GetAllQuestionsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllQuestionsBySubject" finished-at="2025-11-26T17:15:19 IST" duration-ms="254" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllQuestionsBySubject -->
-        <test-method signature="GetAllSubjects()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetAllSubjects" finished-at="2025-11-26T17:15:19 IST" duration-ms="164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetAllSubjects -->
-        <test-method signature="GetConceptsBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetConceptsBySubject" finished-at="2025-11-26T17:15:19 IST" duration-ms="199" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetConceptsBySubject -->
-        <test-method signature="GetDetails()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:19 IST" name="GetDetails" finished-at="2025-11-26T17:15:20 IST" duration-ms="217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetDetails -->
-        <test-method signature="GetEmployeeById()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="GetEmployeeById" finished-at="2025-11-26T17:15:20 IST" duration-ms="226" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetEmployeeById -->
-        <test-method signature="GetSmeBySubject()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="GetSmeBySubject" finished-at="2025-11-26T17:15:20 IST" duration-ms="273" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- GetSmeBySubject -->
-        <test-method signature="RemoveQuestion()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="RemoveQuestion" finished-at="2025-11-26T17:15:20 IST" duration-ms="44" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RemoveQuestion -->
-        <test-method signature="RemoveQuestions()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="RemoveQuestions" finished-at="2025-11-26T17:15:20 IST" duration-ms="32" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RemoveQuestions -->
-        <test-method signature="Reschedule()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="Reschedule" finished-at="2025-11-26T17:15:20 IST" duration-ms="28" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Reschedule -->
-        <test-method signature="getConcept()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="getConcept" finished-at="2025-11-26T17:15:20 IST" duration-ms="168" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getConcept -->
-        <test-method signature="testGetAllSubjects()[pri:0, instance:com.transflower.tflassessment.AssessmentAPITest@7a362b6b]" started-at="2025-11-26T17:15:20 IST" name="testGetAllSubjects" finished-at="2025-11-26T17:15:20 IST" duration-ms="35" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGetAllSubjects -->
-      </class> <!-- com.transflower.tflassessment.AssessmentAPITest -->
-    </test> <!-- AssessmentAPI -->
   </suite> <!-- ProductCatalogSuite -->
 </testng-results>

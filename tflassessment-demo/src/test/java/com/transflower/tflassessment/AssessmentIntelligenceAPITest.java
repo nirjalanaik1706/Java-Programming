@@ -3,7 +3,6 @@ package com.transflower.tflassessment;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.greaterThan;
-import static org.hamcrest.Matchers.notNullValue;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -19,11 +18,11 @@ public class AssessmentIntelligenceAPITest {
     public void testGetCandidateResults_shouldReturn200() {
         given()
         .when()
-            .get("/api/AssessmentIntelligence/Candidates/1/Year/2015")
+            .get("/api/AssessmentIntelligence/Candidates/2/Year/2015")
         .then()
             .statusCode(200)
             .body("size()", greaterThan(0))           
-            .body("[0].candidateId", equalTo(1))    
+            .body("[0].candidateId", equalTo(2))    
             .body("[0].score", equalTo(2))
             .body("[0].subjectTitle",equalTo("COREJAVA"));       
             }

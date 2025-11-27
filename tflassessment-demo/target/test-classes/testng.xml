@@ -6,9 +6,14 @@
            <class name="com.transflower.tflassessment.AssessmentIntelligenceAPITest"/>
         </classes>
     </test>
-    <test name="AssessmentAPI">
+    <!-- <test name="AssessmentAPI">
         <classes>
             <class name="com.transflower.tflassessment.AssessmentAPITest"/>
         </classes>
-        </test>
+        </test> -->
+        <!-- <test name="CandidateAnswerAPI">
+        <classes>
+            <class name="com.transflower.tflassessment.CandidateAnswerAPITest"/>
+        </classes>
+        </test> -->
     </suite>

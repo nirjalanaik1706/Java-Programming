@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [ProductCatalogSuite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="AssessmentAPI(failed)" verbose="0">
+  <test thread-count="5" name="AssessmentIntelligenceAPI Tests(failed)" verbose="0">
     <classes>
-      <class name="com.transflower.tflassessment.AssessmentAPITest">
+      <class name="com.transflower.tflassessment.AssessmentIntelligenceAPITest">
         <methods>
-          <include name="GetAllTests"/>
+          <include name="testGetCandidateResults_shouldReturn200"/>
         </methods>
-      </class> <!-- com.transflower.tflassessment.AssessmentAPITest -->
+      </class> <!-- com.transflower.tflassessment.AssessmentIntelligenceAPITest -->
     </classes>
-  </test> <!-- AssessmentAPI(failed) -->
+  </test> <!-- AssessmentIntelligenceAPI Tests(failed) -->
 </suite> <!-- Failed suite [ProductCatalogSuite] -->
