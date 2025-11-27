@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 public class ConceptAPITest {
     
     static{
-        RestAssured.baseURI="https://localhost:5238/api/Concepts";
+        RestAssured.baseURI="http://localhost:5238/api/Concepts";
     }
     @Test
     public void UpdateConcept(){
@@ -18,7 +18,24 @@ public class ConceptAPITest {
         .put("/10/questions/64")
         .then()
         .statusCode(200)
-        .body(equalTo(true));
+        .body(equalTo("true"));
+    }
+
+    @Test
+    public void UpdateSubject(){
+        given()
+        .header("Content-Type","application/json")
+        .when()
+        .put("/8/subjects/2")
+        .then()
+        .statusCode(200)
+        .body(equalTo("true"));
     }
     
+    @Test
+    public void InsertConcept(){
+        String requestBody="""
+                
+                """;
+    }
 }
