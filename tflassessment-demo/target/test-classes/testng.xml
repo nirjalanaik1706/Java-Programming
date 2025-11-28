@@ -16,9 +16,14 @@
             <class name="com.transflower.tflassessment.CandidateAnswerAPITest"/>
         </classes>
         </test> -->
-        <test name="ConceptAPITest">
+        <!-- <test name="ConceptAPITest">
         <classes>
             <class name="com.transflower.tflassessment.ConceptAPITest"/>
+        </classes>
+        </test> -->
+         <test name="QuestionBankAPITest">
+        <classes>
+            <class name="com.transflower.tflassessment.QuestionBankAPITest"/>
         </classes>
         </test>
     </suite>
