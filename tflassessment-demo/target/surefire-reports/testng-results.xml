@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-27T17:04:18 IST" name="ProductCatalogSuite" finished-at="2025-11-27T17:04:20 IST" duration-ms="1776">
+  <suite started-at="2025-11-28T16:42:29 IST" name="ProductCatalogSuite" finished-at="2025-11-28T16:42:32 IST" duration-ms="3073">
     <groups>
     </groups>
-    <test started-at="2025-11-27T17:04:18 IST" name="ConceptAPITest" finished-at="2025-11-27T17:04:20 IST" duration-ms="1776">
+    <test started-at="2025-11-28T16:42:29 IST" name="ConceptAPITest" finished-at="2025-11-28T16:42:32 IST" duration-ms="3073">
       <class name="com.transflower.tflassessment.ConceptAPITest">
-        <test-method signature="UpdateConcept()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@36060e]" started-at="2025-11-27T17:04:18 IST" name="UpdateConcept" finished-at="2025-11-27T17:04:20 IST" duration-ms="1679" status="PASS">
+        <test-method signature="GetConceptBySubjectId()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@46b61c56]" started-at="2025-11-28T16:42:29 IST" name="GetConceptBySubjectId" finished-at="2025-11-28T16:42:32 IST" duration-ms="2867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetConceptBySubjectId -->
+        <test-method signature="InsertConcept()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@46b61c56]" started-at="2025-11-28T16:42:32 IST" name="InsertConcept" finished-at="2025-11-28T16:42:32 IST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertConcept -->
+        <test-method signature="UpdateConcept()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@46b61c56]" started-at="2025-11-28T16:42:32 IST" name="UpdateConcept" finished-at="2025-11-28T16:42:32 IST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UpdateConcept -->
-        <test-method signature="UpdateSubject()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@36060e]" started-at="2025-11-27T17:04:20 IST" name="UpdateSubject" finished-at="2025-11-27T17:04:20 IST" duration-ms="35" status="PASS">
+        <test-method signature="UpdateSubject()[pri:0, instance:com.transflower.tflassessment.ConceptAPITest@46b61c56]" started-at="2025-11-28T16:42:32 IST" name="UpdateSubject" finished-at="2025-11-28T16:42:32 IST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UpdateSubject -->

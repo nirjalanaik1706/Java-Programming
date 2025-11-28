@@ -8,14 +8,14 @@ import static io.restassured.RestAssured.given;
 public class ConceptAPITest {
     
     static{
-        RestAssured.baseURI="http://localhost:5238/api/Concepts";
+        RestAssured.baseURI="http://localhost:5238";
     }
     @Test
     public void UpdateConcept(){
         given()
         .header("Content-Type","application/json")
         .when()
-        .put("/10/questions/64")
+        .put("/api/Concepts/10/questions/64")
         .then()
         .statusCode(200)
         .body(equalTo("true"));
@@ -26,7 +26,7 @@ public class ConceptAPITest {
         given()
         .header("Content-Type","application/json")
         .when()
-        .put("/8/subjects/2")
+        .put("/api/Concepts/8/subjects/2")
         .then()
         .statusCode(200)
         .body(equalTo("true"));
@@ -35,7 +35,36 @@ public class ConceptAPITest {
     @Test
     public void InsertConcept(){
         String requestBody="""
-                
+            {
+            "id": 23,
+            "title": "Introduction to Algorithms",
+            "subjectId": 8
+            }
                 """;
+            given()
+            .header("Content-Type","application/json")
+            .body(requestBody)
+            .when()
+            .post("/api/Concepts")
+            .then()
+            .statusCode(200)
+            .body(equalTo("false"));
     }
+
+    @Test
+    public void GetConceptBySubjectId(){
+        given()
+        .when()
+        .get("/api/Concepts/1")
+        .then()
+        .statusCode(200)
+        .body("[0].id",equalTo(1))
+        .body("[0].title",equalTo("OOPS"))
+        .body("[0].subjectId",equalTo(1));
+    }
+    
+    @Test
+    public void 
+
+
 }

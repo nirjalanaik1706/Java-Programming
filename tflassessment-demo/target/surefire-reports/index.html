@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,16 @@
                       <a href="#" panel-name="suite-ProductCatalogSuite" class="show-methods passed suite-ProductCatalogSuite"> (show)</a> <!-- show-methods passed suite-ProductCatalogSuite -->
                     </span>
                     <div class="method-list-content passed suite-ProductCatalogSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.ConceptAPITest" class="method navigator-link" hash-for-method="GetConceptBySubjectId">GetConceptBySubjectId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.ConceptAPITest" class="method navigator-link" hash-for-method="InsertConcept">InsertConcept</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ProductCatalogSuite" title="com.transflower.tflassessment.ConceptAPITest" class="method navigator-link" hash-for-method="UpdateConcept">UpdateConcept</a> <!-- method navigator-link -->
@@ -129,6 +139,20 @@
               <span class="class-name">com.transflower.tflassessment.ConceptAPITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GetConceptBySubjectId">
+                  </a> <!-- GetConceptBySubjectId -->
+                  <span class="method-name">GetConceptBySubjectId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="InsertConcept">
+                  </a> <!-- InsertConcept -->
+                  <span class="method-name">InsertConcept</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="UpdateConcept">
@@ -197,20 +221,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'UpdateConcept')
+data.setCell(0, 1, 'GetConceptBySubjectId')
 data.setCell(0, 2, 'com.transflower.tflassessment.ConceptAPITest')
-data.setCell(0, 3, 1679);
+data.setCell(0, 3, 2867);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'UpdateSubject')
+data.setCell(1, 1, 'InsertConcept')
 data.setCell(1, 2, 'com.transflower.tflassessment.ConceptAPITest')
-data.setCell(1, 3, 35);
+data.setCell(1, 3, 67);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'UpdateConcept')
+data.setCell(2, 2, 'com.transflower.tflassessment.ConceptAPITest')
+data.setCell(2, 3, 46);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'UpdateSubject')
+data.setCell(3, 2, 'com.transflower.tflassessment.ConceptAPITest')
+data.setCell(3, 3, 27);
 window.suiteTableData['ProductCatalogSuite']= { tableData: data, tableDiv: 'times-div-ProductCatalogSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-ProductCatalogSuite">
               </div> <!-- times-div-ProductCatalogSuite -->
             </div> <!-- times-div -->
@@ -238,12 +270,20 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.transflower.tflassessment.ConceptAPITest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">UpdateConcept</span>
+                <span class="method-name">GetConceptBySubjectId</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">InsertConcept</span>
+                <span class="method-start">2870 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpdateConcept</span>
+                <span class="method-start">2939 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">UpdateSubject</span>
-                <span class="method-start">1683 ms</span>
+                <span class="method-start">2987 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

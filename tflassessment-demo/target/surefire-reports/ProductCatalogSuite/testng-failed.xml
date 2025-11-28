@@ -5,7 +5,7 @@
     <classes>
       <class name="com.transflower.tflassessment.ConceptAPITest">
         <methods>
-          <include name="UpdateSubject"/>
+          <include name="InsertConcept"/>
         </methods>
       </class> <!-- com.transflower.tflassessment.ConceptAPITest -->
     </classes>
