@@ -182,9 +182,9 @@ public class QuestionBankAPITest {
         .body("[0].subject.title",equalTo("COREJAVA")); 
     }
     
-        //@Test
-   //public void GetSubjectQuestionCount()
-  //  {
+        @Test
+   public void GetSubjectQuestionCount()
+  {
      //   given()
      //   .when()
       //  .get("/api/questionbank/questionCount")
@@ -193,7 +193,7 @@ public class QuestionBankAPITest {
      //   .body("[0].questionCount",equalTo(10))
      //   .body("[0].subject.id",equalTo(1))
      //   .body("[0].subject.title",equalTo("COREJAVA")); 
- //   }
+   }
 
     
 }
