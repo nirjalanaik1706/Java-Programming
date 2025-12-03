@@ -195,5 +195,14 @@ public class QuestionBankAPITest {
      //   .body("[0].subject.title",equalTo("COREJAVA")); 
    }
 
+    // @Test
+    // public void GetSubject(){
+        //   given()
+     //   .when()
+      //  .get("/api/questionbank/questionCount")
+      //  .then()
+     //   .statusCode(200)
+    //}
+
     
 }
