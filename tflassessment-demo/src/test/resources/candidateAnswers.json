@@ -11,4 +11,10 @@
     "testQuestionId": 17,
     "answerKey": "A"
   }
+   {
+    "id": 3,
+    "candidateId": 19,
+    "testQuestionId": 20,
+    "answerKey": "A"
+   }
 ]
