@@ -34,5 +34,10 @@ import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaReposit
         repo.updateCriteria(EvaluationCriteriaId, subjectId);
         return true;
     }
+   // @Override
+   //  public boolean updateCriteriaRepo(int EvaluationCriteriaId, int subjectId) {
+   //      repo.updateCriteria(EvaluationCriteriaId, subjectId);
+   //      return true;
+   //  }
 
 }
