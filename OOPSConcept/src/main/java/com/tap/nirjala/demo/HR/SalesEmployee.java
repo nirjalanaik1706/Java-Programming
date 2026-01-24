@@ -1,7 +1,5 @@
 package com.tap.nirjala.demo.HR;
 
-
-
 public class SalesEmployee extends Employee  {
         protected double incentive;
         protected double target;

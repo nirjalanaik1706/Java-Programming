@@ -1,6 +1,8 @@
 package com.tap.nirjala.demo.HR;
 
-public abstract class Employee {
+import com.tap.nirjala.demo.HR.Interfaces.IAppraisable;
+
+public abstract class Employee implements IAppraisable{
 
     protected int id;
     protected String firstName;
@@ -29,6 +31,11 @@ public abstract class Employee {
     public String toString(){
         return "Employee["+this.getClass().getSimpleName()+"]\n"+"id="+id+"\n"+"firstName="+firstName+"\n"+"lastName="+lastName+"\n"+"email="+email+"\n"+"contactNumber="+contactNumber+"\n"+"location="+location;
 
+    }
+
+    public void ConductAppraisal()
+    {
+        System.out.println("Sales Employee appraisal completed.");
     }
 }
 
