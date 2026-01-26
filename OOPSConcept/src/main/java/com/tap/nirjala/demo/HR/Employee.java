@@ -4,7 +4,7 @@ import com.tap.nirjala.demo.HR.Interfaces.IAppraisable;
 
 public abstract class Employee implements IAppraisable{
 
-    protected int id;
+    private  int id;
     protected String firstName;
     protected String lastName;
     protected String email;

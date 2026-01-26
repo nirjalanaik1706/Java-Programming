@@ -1,6 +1,8 @@
 package com.tap.nirjala.demo.HR;
 
-public class SalesEmployee extends Employee  {
+import com.tap.nirjala.demo.HR.Interfaces.IBonusEligible;
+
+public class SalesEmployee extends Employee  implements IBonusEligible {
         protected double incentive;
         protected double target;
         protected double acheivedTarget;
@@ -30,7 +32,12 @@ public class SalesEmployee extends Employee  {
             }
             return totalSalary;
         }
-
+        @Override
+        public float CalculateBonus()
+        {
+            System.out.println("employee bonus");
+            return 5000f;
+        }
 
     }
 
