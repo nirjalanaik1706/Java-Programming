@@ -30,18 +30,22 @@ public class SalesManager extends SalesEmployee implements IManagerBenefits, IIn
         return 8000f;
     }
 
+    @Override
     public void ConductAppraisal() {
         System.out.println("Manager appraisal completed.");
     }
 
+    @Override
     public void ApproveLeave() {
         System.out.println("Leave approved by Sales Manager.");
     }
 
+    @Override
     public void TakeInterview() {
         System.out.println("Sales Manager conducting interview.");
     }
 
+    @Override
     public void Train() {
         System.out.println("Sales Manager training sales team.");
     }
