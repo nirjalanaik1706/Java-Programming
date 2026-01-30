@@ -1,6 +1,6 @@
 package com.tap.nirjala.demo;
 
-final class FinalClass {
+final class FinalClass implements Cloneable{
 
     final int maxLeaves = 25;
     int performance = 8;
@@ -12,4 +12,6 @@ final class FinalClass {
     boolean isEligibleForBonus(int working_hours) {
         return performance >= 8;
     }
+
+    
 }
