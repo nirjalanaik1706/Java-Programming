@@ -1,6 +1,6 @@
 package com.tap.nirjala.demo;
 
-final class FinalClass implements Cloneable{
+final class FinalClass implements Cloneable {
 
     final int maxLeaves = 25;
     int performance = 8;
@@ -13,5 +13,4 @@ final class FinalClass implements Cloneable{
         return performance >= 8;
     }
 
-    
 }
