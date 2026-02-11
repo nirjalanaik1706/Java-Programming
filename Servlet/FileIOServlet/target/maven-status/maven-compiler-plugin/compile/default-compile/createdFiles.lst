@@ -1,0 +1,7 @@
+com\tap\tflassessment\model\QuestionEntity.class
+com\tap\tflassessment\controller\QuestionBankController.class
+com\tap\tflassessment\repository\QuestionBankRepository.class
+com\tap\tflassessment\repository\QuestionBankRepositoryImpl.class
+com\tap\tflassessment\service\QuestionBankService.class
+com\tap\tflassessment\repository\QuestionBankRepositoryImpl$1.class
+com\tap\tflassessment\service\QuestionBankServiceImple.class
