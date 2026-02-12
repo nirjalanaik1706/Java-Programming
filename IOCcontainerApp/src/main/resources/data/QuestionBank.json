@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Java Basics"
+    },
+    {
+        "id": 2,
+        "title": "OOP Concepts"
+    },
+    {
+        "id": 3,
+        "title": "Servlet and JSP"
+    },
+    {
+        "id": 4,
+        "title": "Spring Boot Introduction"
+    }
+]
