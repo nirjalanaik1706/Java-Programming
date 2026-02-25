@@ -16,14 +16,14 @@ public class App
 
         // 🔹 CREATE Course
         Course course = new Course();
-        course.setName("Java Full Stack");
-        course.setDuration("6 Months");
+        course.setName("Java Development");
+        course.setDuration("3 Months");
         session.save(course);
 
         // 🔹 CREATE Student
         Student student = new Student();
-        student.setName("Nirjala");
-        student.setEmail("nirjala@gmail.com");
+        student.setName("Sanika");
+        student.setEmail("sanika@gmail.com");
         student.setCourse(course);
         session.save(student);
 
@@ -47,7 +47,7 @@ public class App
         // 🔹 DELETE
         Session deleteSession = HibernateUtil.getSessionFactory().openSession();
         Transaction tx3 = deleteSession.beginTransaction();
-        Student deleteStudent = deleteSession.get(Student.class, 3);
+        Student deleteStudent = deleteSession.get(Student.class, 4);
         deleteSession.delete(deleteStudent);
         tx3.commit();
         deleteSession.close();
