@@ -33,7 +33,12 @@ public class App
         student2.setCourse(course);
         session.save(student2);
 
-        
+        Student student3 = new Student();
+        student3.setName("Sahil");
+        student3.setEmail("sahil@gmail.com");
+        student3.setCourse(course);
+        session.save(student3);
+
         tx.commit();
         session.close();
 
