@@ -27,6 +27,13 @@ public class App
         student.setCourse(course);
         session.save(student);
 
+        Student student2 = new Student();
+        student2.setName("Nirjala");
+        student2.setEmail("nirjala@gmail.com");
+        student2.setCourse(course);
+        session.save(student2);
+
+        
         tx.commit();
         session.close();
 
