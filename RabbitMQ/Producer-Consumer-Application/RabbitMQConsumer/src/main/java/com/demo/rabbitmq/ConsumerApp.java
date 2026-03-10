@@ -55,6 +55,13 @@ public class ConsumerApp {
                     consumerTag -> {}
             );
 
+            //   channel.basicConsume(
+            //         QUEUE_NAME,
+            //         true,
+            //         deliverCallback,
+            //         consumerTag -> {}
+            // );
+
         } catch (Exception e) {
             e.printStackTrace();
         }
