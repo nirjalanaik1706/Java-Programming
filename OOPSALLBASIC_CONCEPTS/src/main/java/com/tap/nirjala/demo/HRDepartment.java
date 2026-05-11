@@ -1,6 +1,7 @@
 package com.tap.nirjala.demo;
 
 //outer class 
+//nested static class
 public class HRDepartment{
     final int leave=30;
     static String companyName="Transflower learning Pvt.Ltd"; //non-static variable(instance)
