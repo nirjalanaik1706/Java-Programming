@@ -12,4 +12,8 @@ public class HelloController {
     public Map<String, String> hello() {
         return Map.of("message", "Hello from Container");
     }
+  //  @GetMapping("/hello")
+  //  public Map<String, String> hello() {
+    //  return Map.of("message", "Hello from Container");
+    //}
 }
