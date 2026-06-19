@@ -7,15 +7,15 @@ import com.tap.tflassessment.repository.QuestionBankRepositoryImpl;
 
 public class QuestionBankServiceImple implements QuestionBankService {
 
-    private QuestionBankRepositoryImpl repo=new QuestionBankRepositoryImpl();
+    private QuestionBankRepositoryImpl repo = new QuestionBankRepositoryImpl();
 
-    public QuestionBankServiceImple(){
+    public QuestionBankServiceImple() {
 
     }
 
     @Override
-    public List<QuestionEntity> getAllSubjects(){
+    public List<QuestionEntity> getAllSubjects() {
         return repo.getAllQuestions();
     }
-    
+
 }

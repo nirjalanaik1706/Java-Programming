@@ -22,9 +22,10 @@ public class ProductRepositoryImpl implements ProductRepository{
             return products;
     }
     @Override
-    public void deleteById()
+    public void deleteById(int id)
     {
         System.out.println("product deleted from db");
     }
+    
     
 }

@@ -87,7 +87,7 @@ public class JsonProductRepository implements ProductRepository {
         return store.size();
     }
 
-    // ── Persistence helpers ──────────────────────────────────────────────────
+    // ── Persistence helpers ────────────────────────────────────────────────
 
     private void loadFromFile() {
         File file = new File(dataFilePath);

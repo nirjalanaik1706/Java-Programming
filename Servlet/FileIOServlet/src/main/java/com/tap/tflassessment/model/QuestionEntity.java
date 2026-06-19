@@ -1,5 +1,7 @@
 package com.tap.tflassessment.model;
 
+import java.util.Objects;
+
 public class QuestionEntity {
 
     private int id;
@@ -27,4 +29,31 @@ public class QuestionEntity {
         return title;
     }
 
+    @Override
+    public String toString() {
+        return "QuestionEntity{id=" + id + ",title='" + title + "'}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        QuestionEntity other = (QuestionEntity) obj;
+        return id == other.id
+                && Objects.equals(title, other.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title);
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }

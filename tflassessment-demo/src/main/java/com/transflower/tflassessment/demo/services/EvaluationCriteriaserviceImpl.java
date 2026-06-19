@@ -1,15 +1,7 @@
 package com.transflower.tflassessment.demo.services;
  import com.transflower.tflassessment.demo.entities.*;
-import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaRepositoryImpl;
+import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaRepository;
  public class EvaluationCriteriaserviceImpl implements EvaluationCriteriaService {
-
-    private EvaluationCriteriaRepositoryImpl repo = new EvaluationCriteriaRepositoryImpl();
-
-    @Override
-    public boolean updateSubject(int id, int subjectId) {
-        repo.updateSubject(id, subjectId);
-        return true;
-    }
 
     private EvaluationCriteriaRepository repo = null;
 
@@ -34,10 +26,10 @@ import com.transflower.tflassessment.demo.repositories.EvaluationCriteriaReposit
         repo.updateCriteria(EvaluationCriteriaId, subjectId);
         return true;
     }
-   // @Override
-   //  public boolean updateCriteriaRepo(int EvaluationCriteriaId, int subjectId) {
-   //      repo.updateCriteria(EvaluationCriteriaId, subjectId);
-   //      return true;
-   //  }
+   @Override
+    public boolean updateCriteriaRepo(int EvaluationCriteriaId, int subjectId) {
+        repo.updateCriteria(EvaluationCriteriaId, subjectId);
+        return true;
+    }
 
 }
