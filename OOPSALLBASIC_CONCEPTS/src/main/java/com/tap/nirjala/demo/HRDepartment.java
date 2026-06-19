@@ -6,6 +6,12 @@ public class HRDepartment {
     final int leave = 30;
     static String companyName = "Transflower learning Pvt.Ltd"; //non-static variable(instance)
 
+//nested static class
+public class HRDepartment{
+    final int leave=30;
+    static String companyName="Transflower learning Pvt.Ltd"; //non-static variable(instance)
+
+
     //inner class 
     public static class Policy {
 

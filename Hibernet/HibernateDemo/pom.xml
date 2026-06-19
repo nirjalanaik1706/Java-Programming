@@ -46,7 +46,6 @@
 
     </dependencies>
 
-    <!-- ================= BUILD SECTION ================= -->
     <build>
         <plugins>
 

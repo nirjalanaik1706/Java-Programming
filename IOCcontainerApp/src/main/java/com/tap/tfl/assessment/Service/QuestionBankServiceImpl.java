@@ -18,5 +18,9 @@ public class QuestionBankServiceImpl implements QuestionBankService {
     public List<QuestionEntity> getAllQuestions(){
         return repo.getAllQuestions();
     }
+    // @Override
+    // public List<QuestionEntity>getQuestionById(){
+    //     return repo.getQuestionById();
+    // }
     
 }
