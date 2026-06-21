@@ -8,13 +8,13 @@ public class UIManager {
 
     public void displayMenu() {
         System.out.println("===============================");
-        System.out.println("1. display user");
+        System.out.println("1. Display user");
         System.out.println("2. Check Balance");
-        System.out.println("3. add user");
+        System.out.println("3. Add new user");
         System.out.println("4. Deposite");
-        System.out.println("5. withdraw");
-        System.out.println("6.Fund Transfer");
-        System.out.println("7. exit");
+        System.out.println("5. Withdraw");
+        System.out.println("6. Fund Transfer");
+        System.out.println("7. Exit");
         System.out.println("===============================");
 
     }
@@ -23,7 +23,9 @@ public class UIManager {
         System.out.println(message);
         System.out.println("===============================");
         int choice = sc.nextInt();
+        System.out.println("===============================");
         return choice;
+        
 
     }
 

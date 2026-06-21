@@ -13,6 +13,7 @@ import com.transflower.Models.Accounts;
 import com.transflower.Models.Operation;
 
 import com.transflower.Repositories.AccountRepository;
+import com.transflower.Services.EmailService;
 import com.transflower.Services.NotificationService;
 import com.transflower.Services.SMSService;
 
@@ -21,8 +22,9 @@ public class AccountDepartment {
     AccountRepository accountRepository = new AccountRepository();
     List<Accounts> accounts = accountRepository.getAll();
     SMSService service = new SMSService();
+    EmailService email=new EmailService();
     List<AccountListener> listeners = new ArrayList<>();
-    Accounts acc = new Accounts();
+
 
     public void getAll() {
         for (Accounts a : accounts) {
@@ -35,6 +37,7 @@ public class AccountDepartment {
             if (a.getAccountNumber() == accountNumber) {
                 System.out.println(a.getName() + " Your bank balance is :" + a.getAmount());
                 balanceStatus(a);
+
                 return;
             }
 
@@ -108,12 +111,14 @@ public class AccountDepartment {
             for (AccountListener l : listeners) {
                 l.onUnderBalance(account.getAmount());
                 service.send("Amount is less than 1000");
+                email.send("Please keep your balance over 1000");
             }
         }
         if (account.getAmount() > 25000) {
             for (AccountListener l : listeners) {
                 l.onOverBalance(account.getAmount());
                 service.send("Amount is more than 25000");
+                email.send("Please keep Your balance under 25000");
             }
         }
     }
