@@ -2,18 +2,27 @@ package com.transflower.Departments;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.management.Notification;
+
+import com.transflower.Listeners.AccountListener;
 import com.transflower.Models.Accounts;
 import com.transflower.Models.Operation;
 
 import com.transflower.Repositories.AccountRepository;
+import com.transflower.Services.NotificationService;
+import com.transflower.Services.SMSService;
 
 public class AccountDepartment {
 
     AccountRepository accountRepository = new AccountRepository();
     List<Accounts> accounts = accountRepository.getAll();
+    SMSService service = new SMSService();
+    List<AccountListener> listeners = new ArrayList<>();
+    Accounts acc = new Accounts();
 
     public void getAll() {
         for (Accounts a : accounts) {
@@ -24,7 +33,9 @@ public class AccountDepartment {
     public void checkBalance(long accountNumber) {
         for (Accounts a : accounts) {
             if (a.getAccountNumber() == accountNumber) {
-                System.out.println(a.getAmount());
+                System.out.println(a.getName() + " Your bank balance is :" + a.getAmount());
+                balanceStatus(a);
+                return;
             }
 
         }
@@ -42,8 +53,10 @@ public class AccountDepartment {
             if (a.getAccountNumber() == Account_number) {
                 a.setAmount(a.getAmount() + amount);
                 System.out.println(a.getName() + " your updated balance:" + a.getAmount());
+                balanceStatus(a);
                 accountRepository.save(accounts);
                 return true;
+
             }
         }
         return false;
@@ -54,6 +67,7 @@ public class AccountDepartment {
             if (a.getAccountNumber() == Account_number) {
                 a.setAmount(a.getAmount() - amount);
                 System.out.println(a.getName() + "your updated balance:" + a.getAmount());
+                balanceStatus(a);
                 accountRepository.save(accounts);
                 return true;
             }
@@ -89,4 +103,22 @@ public class AccountDepartment {
 
     }
 
+    public void balanceStatus(Accounts account) {
+        if (account.getAmount() < 1000) {
+            for (AccountListener l : listeners) {
+                l.onUnderBalance(account.getAmount());
+                service.send("Amount is less than 1000");
+            }
+        }
+        if (account.getAmount() > 25000) {
+            for (AccountListener l : listeners) {
+                l.onOverBalance(account.getAmount());
+                service.send("Amount is more than 25000");
+            }
+        }
+    }
+
+    public void addListener(AccountListener listener) {
+        listeners.add(listener);
+    }
 }

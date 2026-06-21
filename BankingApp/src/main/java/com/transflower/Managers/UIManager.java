@@ -19,36 +19,39 @@ public class UIManager {
 
     }
 
-    public int getChoice() {
-        System.out.println("enter choice......!!!!!!!!!");
-
+    public int getChoice(String message) {
+        System.out.println(message);
         System.out.println("===============================");
         int choice = sc.nextInt();
         return choice;
 
     }
 
-    public long getAccountNumber() {
-        System.out.println("enter account Number ");
+    public long getAccountNumber(String message) {
+        System.out.println(message);
+        System.out.println("===============================");
         long accountNumber = sc.nextLong();
         return accountNumber;
     }
 
-    public int getId() {
-        System.out.println("Enter id");
+    public int getId(String message) {
+        System.out.println(message);
+        System.out.println("===============================");
         int operationId = sc.nextInt();
         return operationId;
     }
 
-    public String getName() {
-        System.out.println("enter name");
+    public String getName(String message) {
+        System.out.println(message);
+        System.out.println("===============================");
         String name = sc.next();
         return name;
 
     }
 
-    public double getAmount() {
-        System.out.println("Enter Amount");
+    public double getAmount(String message) {
+        System.out.println(message);
+        System.out.println("===============================");
         double amount = sc.nextInt();
         return amount;
     }

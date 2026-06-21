@@ -34,7 +34,7 @@ public class AccountRepository {
         }
     }
 
-     public List<Accounts> getAllOprations() {
+    public List<Accounts> getAllOprations() {
         try {
             File file = new File(transfer_file);
             if (!file.exists()) {
@@ -48,34 +48,15 @@ public class AccountRepository {
         }
     }
 
-    // public void addUser(Accounts account) throws IOException {
-    //     List<Accounts> accounts = getAll();
-    //     File file = new File(file_name);
-    //     accounts.add(account);
-    //     objectMapper.writeValue(file, accounts);
-    // }
-
-    // public void deposit(long accountNumber, double amount) throws IOException {
-    //     List<Accounts> accounts = getAll();
-    //     File file = new File(file_name);
-    //     objectMapper.writeValue(file, accounts);
-    // }
-
     public void save(List<Accounts> accounts) throws IOException {
         File file = new File(file_name);
         objectMapper.writeValue(file, accounts);
     }
 
-    public void saveOperation(List<Operation> operations) throws IOException{
-        File file=new File(transfer_file);
-        objectMapper.writeValue(file,operations);
+    public void saveOperation(List<Operation> operations) throws IOException {
+        File file = new File(transfer_file);
+        objectMapper.writeValue(file, operations);
     }
-
-    // public void fund_transfer(String fromAcc, String toAcc, double amount) throws IOException {
-    //     List<Accounts> accounts = getAll();
-    //     File file = new File(file_name);
-    //     objectMapper.writeValue(file, accounts);
-    // }
 
     public List<Operation> getAllOperation() {
         try {
