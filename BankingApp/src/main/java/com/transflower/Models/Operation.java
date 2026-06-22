@@ -5,27 +5,37 @@ import java.util.Date;
 
 public class Operation {
 
-    private long accountNumber;
+    private double  amount;
+    private String accountNumber;
     private String status;
-    private String statusMessage;
-    private String operationOn;
-
+    private String date;
+    
     public Operation() {
 
     }
 
-    public Operation(long accountNumber, String status, String statusMessage, String operationOn) {
+    public Operation(double  amount,String accountNumber, String status, String date) {
+        this.amount=amount;
         this.accountNumber = accountNumber;
         this.status = status;
-        this.statusMessage = statusMessage;
-        this.operationOn = operationOn;
+        this.date=date;
+        
     }
 
-    public long getAccountNumber() {
+
+    public double getAmount(){
+        return amount;
+    }
+
+    public void setAmount(double amount){
+        this.amount=amount;
+    }
+
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(long accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
@@ -37,20 +47,12 @@ public class Operation {
         this.status = status;
     }
 
-    public String getStatusMessage() {
-        return statusMessage;
+    public String getDate() {
+        return date;
     }
 
-    public void setStatusMessage(String statusMessage) {
-        this.statusMessage = statusMessage;
-    }
-
-    public String getOperationOn() {
-        return operationOn;
-    }
-
-    public void setOperationOn(String operationOn) {
-        this.operationOn = operationOn;
+    public void setDate(String date) {
+        this.date = date;
     }
 
 }
