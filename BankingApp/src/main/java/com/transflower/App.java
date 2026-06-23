@@ -72,7 +72,7 @@ public class App {
                     double balance = manager.getBalance("Enter Amount To Send");
                     boolean status = dept.fundTransfer(fromAccNumber, toAccNumber, balance);
                     if (status) {
-                        System.out.println("Fund transfer successfully...!!!");
+                        System.out.println("Fund transfer successfully...!!!!");
                     } else {
                         System.out.println("Fund not transfer successfully...!!!");
                     }
