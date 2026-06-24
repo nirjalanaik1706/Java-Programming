@@ -29,5 +29,6 @@
   </dependencies>
   <build>
     <finalName>IOCcontainerApp</finalName>
+    <!-- <finalName>IOCApp</finalName> -->
   </build>
 </project>
